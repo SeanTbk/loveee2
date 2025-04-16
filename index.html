@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Love Letter to You</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
+    
+    :root {
+      --pink: #ff6b81;
+      --dark: #2f3542;
+      --light: #f1f2f6;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+      color: var(--dark);
+      text-align: center;
+      padding: 20px;
+      line-height: 1.8;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: var(--pink);
+      margin-bottom: 30px;
+    }
+    
+    .letter {
+      font-size: 1.1rem;
+      text-align: left;
+      margin: 30px 0;
+    }
+    
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      color: var(--pink);
+      text-align: right;
+      margin-top: 40px;
+    }
+    
+    .heart {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      animation: float 3s ease-in forwards;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Love Letter to You 💌</h1>
+    
+    <div class="letter">
+      <p>My Dearest,</p>
+      
+      <p>I want you to know how deeply you’ve changed my life. From the moment we met, something in me recognized something in you—a missing piece I didn’t know I was searching for.</p>
+      
+      <p>You make me feel understood in ways no one else ever has. The way you pay attention to every detail—how you never forget what matters, how you always seem to know what I need before I do. The safety I feel when your hand finds mine in a crowded room.</p>
+      
+      <p>I may not always say it perfectly, but please know:</p>
+      <ul>
+        <li>Your laughter is my favorite sound</li>
+        <li>Your thoughtfulness takes my breath away</li>
+        <li>The way you care fiercely for those you love inspires me</li>
+        <li>Even your stubbornness is something I cherish</li>
+      </ul>
+      
+      <p>I promise to keep choosing you—not just when it’s easy, but when it matters. To be your shelter and your adventure partner. To grow with you, learn with you, and build a life that makes us both proud.</p>
+      
+      <p>With all my heart, now and always,</p>
+    </div>
+    
+    <div class="signature">
+      Your Shaun 💖
+    </div>
+  </div>
+
+  <script>
+    // Floating hearts when clicked
+    document.addEventListener('click', function(e) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = e.clientX + 'px';
+      heart.style.top = e.clientY + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 3000);
+    });
+  </script>
+</body>
+</html>
